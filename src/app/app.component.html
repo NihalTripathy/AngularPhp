@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto" >
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto" *ngIf="isLoggedin ">
+      <!-- <ul class="navbar-nav mr-auto"> -->
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" routerLink="/product">Product <span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <span class="navbar-text" *ngIf="!isLoggedin">
+        <a routerLink="/login"><button class="btn btn-outline-success mr-2" type="button">Login</button></a>
+        <a routerLink="/register"><button class="btn btn-outline-primary" type="button">Register</button></a>
+      </span>
+      <span class="navbar-text" *ngIf="isLoggedin">
+        <button class="btn btn-outline-success mr-2" type="button" (click)="logout()">Logout</button>
+        <!-- <a routerLink="/register"><button class="btn btn-outline-primary" type="button">Register</button></a> -->
+      </span>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

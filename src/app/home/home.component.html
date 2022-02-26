@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="mt-1 col-3" *ngFor="let item of productData;">
+        <div class="card" style="width: 18rem; height: auto;" >
+            <div class="card-body">
+              <h5 class="card-title">Name: {{item.title}}</h5>
+              <p class="card-text">Details: {{item.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
