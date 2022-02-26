@@ -1,4 +1,4 @@
-## INSTRUCTION  FOR FRONTEND
+## INSTRUCTION  FOR FRONTEND(ANGULAR)
 1.OPEN THE FOLDER AND INSTALL ALL NPM PACKAGES
 2.RUN npm start command(before that setup Backend code which is in main branch)
 3.Register your self in db and login
